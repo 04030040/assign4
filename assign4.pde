@@ -149,7 +149,7 @@ for (int n=0; n<level1Enemy.length/2; n++)
 {level1Enemy[n*2]=enemy1PosX-(n*(enemySize+10));
 level1Enemy[n*2+1]=enemy1PosY;
 }
-println(level1Enemy);
+//println(level1Enemy);
 
 /*
 for every row of levelXFlame: 
@@ -189,8 +189,8 @@ flame[4]=loadImage("img/flame5.png");
 }
 
 void mousePressed(){
-println("mousePressed");
-println("mouseX, Y =", mouseX, ", ", mouseY);
+//println("mousePressed");
+//println("mouseX, Y =", mouseX, ", ", mouseY);
 if (gameState==gameStart &&
 // start Button
 mouseX>strtBnLftBrdrX&&mouseX<strtBnRtBrdrX&&mouseY>strtBnUpBrdrY&&mouseY<strtBnLwBrdrY
@@ -205,7 +205,9 @@ mouseX>endBnLftBrdrX&&mouseX<endBnRtBrdrX&&mouseY>endBnUpBrdrY&&mouseY<endBnLwBr
 gameState=gameStart;
 }
 else if (gameState==gameWin){gameState=gameStart;}
-else{println("mousePressed else");}
+else{
+//println("mousePressed else");
+}
 }
 
 
@@ -215,19 +217,19 @@ if (key == CODED) {
 switch (keyCode) {
 case UP:
 upPressed = true;
-println("upPressed");
+//println("upPressed");
 break;
 case DOWN:
 downPressed = true;
-println("downPressed");
+//println("downPressed");
 break;
 case LEFT:
 leftPressed = true;
-println("leftPressed");
+//println("leftPressed");
 break;
 case RIGHT:
 rightPressed = true;
-println("rightPressed");
+//println("rightPressed");
 break;
 }
 }
@@ -257,7 +259,7 @@ void draw (){
 switch (gameState){
 
 case gameStart:
-println("gameStart");
+//println("gameStart");
 
 
 //start Button
@@ -270,7 +272,7 @@ image (startImg2, 0, 0);
 break;
 
 case gameWin:
-println("gameWin");
+//println("gameWin");
 break;
 
 case gameLose:
@@ -308,11 +310,11 @@ image (endImg1, 0, 0);
 else{
 image (endImg2, 0, 0);
 }
-println("gameLose");
+//println("gameLose");
 break;
 
 case gameRun:
-println("gameRun");
+//println("gameRun");
 // background run
 image (backgroundImg1, bg1PosX++, 0);
 image (backgroundImg2, bg2PosX++, 0);
@@ -334,7 +336,7 @@ image(fighterimg, fighterPosX, fighterPosY);
 stroke(0,0,50);fill(0,0,50);
 rect(21, 15, 190, 20); //full hp == 190 point
 // hp itself
-println("hpValue=", hpValue);
+//println("hpValue=", hpValue);
 stroke(0,0,200);fill(0,0,200);
 if (hpValue<40){stroke(250,20,20);fill(250,20,20);}
 if(hpValue>0){
@@ -372,10 +374,10 @@ enemy1PosY-=enemySpeedY;
 */
 
 // align enemy
-println("i=", i);
+//println("i=", i);
 switch(gameLevel){
   case '1':
-    println("gameLevel='1'");
+//    println("gameLevel='1'");
 //level 1
 if (enemy1PosX<(width+7*(enemySize+10))){
 
@@ -433,7 +435,7 @@ level2Enemy[n*2+1]=enemy1PosY-n*15;
   
   case '2':
   //level 2
-  println("gameLevel='2'");
+//  println("gameLevel='2'");
 
 if (enemy1PosX<(width+7*(enemySize+10))){
   for (int n=0; n<level2Enemy.length/2; n++)
@@ -506,7 +508,7 @@ enemy1PosY=floor(random(height-260))+100;
   
   case '3':
   //level 3
-    println("gameLevel='3'");
+//    println("gameLevel='3'");
 
     if (enemy1PosX<(width+7*(enemySize+10))){
       
@@ -549,8 +551,8 @@ if(level3Flame[n][2] != -2*width)
   
   
   
-    println("enemy1PosX=", enemy1PosX);
-    println("enemy1PosY=", enemy1PosY);
+//    println("enemy1PosX=", enemy1PosX);
+//    println("enemy1PosY=", enemy1PosY);
   enemy1PosX=enemy1PosX+3;
 }else{
     //after level 3, go to level 1
@@ -568,8 +570,8 @@ while (i<5){
 image (enemyImg, enemy1PosX-i*(enemySize+10), enemy1PosY-i*15);
   i++;
 }
-    println("enemy1PosX=", enemy1PosX);
-    println("enemy1PosY=", enemy1PosY);
+//    println("enemy1PosX=", enemy1PosX);
+//    println("enemy1PosY=", enemy1PosY);
 
   enemy1PosX=enemy1PosX+3;
   i=0;
