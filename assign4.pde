@@ -406,7 +406,7 @@ if (enemy1PosX<(width+7*(enemySize+10))){
     for (int j=0; j<5; j++)
     {
 //      println("n="+n+", j="+j);
-      if ((Math.abs(level1Enemy[n*2]+15-shootPos[j][0])<=46)&&Math.abs(level1Enemy[n*2+1]+17-shootPos[j][0])<=44)
+      if ((Math.abs(level1Enemy[n*2]+15-shootPos[j][0])<=46)&&Math.abs(level1Enemy[n*2+1]+17-shootPos[j][1])<=44)
       {
         shootPos[j][0]=-2*width;
         //record the frameCount of the moment
@@ -531,7 +531,7 @@ if (enemy1PosX<(width+7*(enemySize+10))){
     //enemy shoot contact
     for (int j=0; j<5; j++)
     {
-      if ((Math.abs(level2Enemy[n*2]+15-shootPos[j][0])<=46)&&Math.abs(level2Enemy[n*2+1]+17-shootPos[j][0])<=44)
+      if ((Math.abs(level2Enemy[n*2]+15-shootPos[j][0])<=46)&&Math.abs(level2Enemy[n*2+1]+17-shootPos[j][1])<=44)
       {
         //set the contacted shoot to reload
         shootPos[j][0]=-2*width;
@@ -672,7 +672,7 @@ if (enemy1PosX<(width+7*(enemySize+10)))
     for (int j=0; j<5; j++)
     {
 //      println("n="+n+", j="+j);
-      if ((Math.abs(level3Enemy[n*2]+15-shootPos[j][0])<=46)&&Math.abs(level3Enemy[n*2+1]+17-shootPos[j][0])<=44)
+      if ((Math.abs(level3Enemy[n*2]+15-shootPos[j][0])<=46)&&Math.abs(level3Enemy[n*2+1]+17-shootPos[j][1])<=44)
       {
         //set the contacted shoot to reload
         shootPos[j][0]=-2*width;
